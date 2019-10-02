@@ -1,0 +1,14 @@
+
+
+Exercise 6
+Starting Point( 12 , 10 )
+Ending Point( 17 , 80 )
+Slope 14.0
+b -158.0
+Equation(y= mx +b ) - y = 14.0 x + -158.0
+Accelerating- (13, 24.0)
+Accelerating- (14, 38.0)
+Accelerating- (15, 52.0)
+Accelerating- (16, 66.0)
+Accelerating- (17, 80.0)
+We have arrived
