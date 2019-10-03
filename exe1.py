@@ -1,15 +1,19 @@
-print ("Exercise 1")
-aircrafts = {
-    "x": 567.888,
-    "y": 895.11
-}
-print ("X -", aircrafts["x"], ", Y -", aircrafts["y"])
-multipleAircrafts = [{"x": 123.345, "y": 234.567},
-                     {"x": 23.345, "y": 24.567},
-                     {"x": 13.345, "y": 23.567},
-                     {"x": 129.345, "y": 237.567},
-                     {"x": 193.345, "y": 239.567},
-                     {"x": 123.366, "y": 236.67}]
-for aircraft in multipleAircrafts:
-    print ("X -", aircraft["x"], ", Y -", aircraft["y"])
+# Exercise #1:  A Basic Aircraft
 
+# Exercise 1, part 1
+print("# Exercise 1, part 1")
+aircrafts = {"x": 21, "y": 41}
+
+print(aircrafts["x"])
+print(aircrafts["y"])
+
+
+# Exercise 1, part 2
+print("\n# Exercise 1, part 2")
+Aircrafts = ["aircraft_1", "aircraft_2", "aircraft_3", "aircraft_4", "aircraft_5"]
+coordinates = [50,55, 60,61, 65,66, 71,73, 74,76]
+
+var = 0
+for aircraft in Aircrafts:
+    print(aircraft, "coordinates are: ", coordinates[var], coordinates[var+1])
+    var+= 2

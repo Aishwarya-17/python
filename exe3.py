@@ -1,49 +1,95 @@
-print ("\n\nExercise 3")
+class Aircraft:
+    x=y = 0
+    acceleration = 1
 
-aircraft1 = Aircraft()
-aircraft2 = Aircraft()
-aircraft3 = Aircraft()
-aircraft4 = Aircraft()
-aircraft5 = Aircraft()
-for i in range(0, 10):
-    aircraft1.moveRight()
-    aircraft1.moveRight()
-    aircraft1.moveLeft()
-    aircraft1.moveUp()
-    aircraft1.moveUp()
-    aircraft1.moveDown()
+    def move_left(self):
+        # print("Moved Left..")
+        self.x = self.x-1
 
-    aircraft2.moveRight()
-    aircraft2.moveRight()
-    aircraft2.moveUp()
-    aircraft2.moveUp()
+    def move_right(self):
+        # print("Moved Right..")
+        self.x = self.x+1
 
-    aircraft3.moveRight()
-    aircraft3.moveLeft()
-    aircraft3.moveUp()
-    aircraft3.moveUp()
-    aircraft3.moveDown()
+    def move_up(self):
+        self.y = self.y+1
+        # print("Moved Up..")
 
-    aircraft1.moveRight()
-    aircraft1.moveRight()
-    aircraft1.moveLeft()
-    aircraft1.moveUp()
-    aircraft1.moveDown()
+    def move_down(self):
+        # print("Moved Down..")
+        self.y = self.y-1
 
-    aircraft4.moveRight()
-    aircraft4.moveLeft()
-    aircraft4.moveDown()
-    aircraft4.moveDown()
+print("# Exercise 3 \n")
 
-    aircraft5.moveLeft()
-    aircraft5.moveLeft()
-    aircraft5.moveUp()
-    aircraft5.moveUp()
-    aircraft5.moveDown()
-    aircraft5.moveDown()
-    aircraft5.moveDown()
-print ("Aircraft1 X -", aircraft1.x, ", Y -", aircraft1.y)
-print ("Aircraft2 X -", aircraft2.x, ", Y -", aircraft2.y)
-print ("Aircraft3 X -", aircraft3.x, ", Y -", aircraft3.y)
-print ("Aircraft4 X -", aircraft4.x, ", Y -", aircraft4.y)
-print ("Aircraft5 X -", aircraft5.x, ", Y -", aircraft5.y)
+instances=["instance1", "instance2", "instance3", "instance4", "instance5"]
+for i in range(len(instances)):
+
+    instances[i] = Aircraft()
+    print("Creating New Aircraft Object:",i)
+    print("New Aircraft Object Has Just Been Initalized:",i)
+    print("Initial X-Coord:",instances[i].x)
+    print("Initial Y-Coord:",instances[i].y)
+
+for i in range(len(instances)):
+    if i==0:
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+
+    if i==1:
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+
+    if i==2:
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+
+    if i==3:
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved LEFT ...")
+        instances[i].move_left()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+
+    if i==4:
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved RIGHT ...")
+        instances[i].move_right()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+        print("Aircraft Instance",i,"has moved UP ...")
+        instances[i].move_up()
+
+for i in range(len(instances)):
+    print("\nAircraft [",i,"]")
+    print("Final X-Coord:", instances[i].x)
+    print("Final Y-Coord:", instances[i].y)
+

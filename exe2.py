@@ -1,36 +1,40 @@
-print ("\n\nExercise 2")
+# Exercise #2:  An Aircraft Object
 
+class Aircraft:
+    x=y = 0
+    acceleration = 1
 
-class Aircraft(object):
-    def __init__(self):
-        self.x = 0
-        self.y = 0
-        self.acc = 1
+    def move_left(self):
+        print("Moved Left..")
+        self.x = self.x-1
 
-    def moveRight(self):
-        self.x += 1
+    def move_right(self):
+        print("Moved Right..")
+        self.x = self.x+1
 
-    def moveLeft(self):
-        self.x += -1
+    def move_up(self):
+        self.y = self.y+1
+        print("Moved Up..")
 
-    def moveUp(self):
-        self.y += -1
+    def move_down(self):
+        print("Moved Down..")
+        self.y = self.y-1
 
-    def moveDown(self):
-        self.y += 1
+print("# Exercise 2")
+instance = Aircraft()
+print("Initial X-Coord:", instance.x)
+print("Initial Y-Coord:", instance.y)
 
-
-aircraft = Aircraft()
-aircraft.moveDown()
-aircraft.moveDown()
-aircraft.moveUp()
-aircraft.moveLeft()
-aircraft.moveLeft()
-aircraft.moveRight()
-aircraft.moveDown()
-aircraft.moveDown()
-aircraft.moveUp()
-aircraft.moveLeft()
-aircraft.moveLeft()
-aircraft.moveRight()
-print ("Aircraft X -", aircraft.x, ", Y -", aircraft.y)
+instance.move_right()
+instance.move_right()
+instance.move_up()
+instance.move_right()
+instance.move_left()
+instance.move_up()
+instance.move_up()
+instance.move_down()
+instance.move_up()
+instance.move_down()
+instance.move_up()
+print("Final X-Coord:", instance.x)
+print("Final Y-Coord:", instance.y)
